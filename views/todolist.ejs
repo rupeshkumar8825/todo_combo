@@ -1,0 +1,133 @@
+<!-- writing the html for the todolist page for this website  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <!-- linking the css part for this  -->
+    <link rel="stylesheet" href="css/todolist.css">
+    <!-- <script src="../src/todolist.js"></script> -->
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navigation">
+            <li><a href="">Todolist</a></li>
+            <li><a href="/notes">Notes</a></li>
+            <li><a href="/yourarena">Your arena</a></li>
+            <li><a href="/signin">sign out</a></li>
+        </ul>
+
+        <div class="hambur" id="closed">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+    <!-- adding the another section for the categories of the todolist  -->
+    <section class="outersection">
+        <h1>Choose from Categories</h1>
+        <div class="container1">
+            <div class="category" id="work">
+                <form action="/work" method="GET">
+                    <button type="submit">Work</button>
+                </form>
+                <!-- in between we want to add the plus sign  -->
+                <p>todolist related to work here</p>
+
+            </div>
+            <div class="category" id="life">
+                <!-- <h1>Life</h1> -->
+                <form action="/life" method="GET">
+                    <button type="submit">Life</button>
+                </form>
+                <p>todolist related to life here</p>
+
+            </div>
+            <div class="category" id="personal">
+                <!-- <h1>Personal</h1> -->
+                <form action="/personal" method="GET">
+                    <button type="submit">Personal</button>
+                </form>
+                <p>todolist related to personal here</p>
+
+            </div>
+            <div class="category" id="home">
+                <!-- <h1>Home</h1> -->
+                <form action="/Home" method="GET">
+                    <button type="submit">Home</button>
+                </form>
+                <p>todolist related to Home here</p>
+
+            </div>
+            <div class="category" id="college">
+                <!-- <h1>College</h1> -->
+                <form action="/college" method="GET">
+                    <button type="submit">College</button>
+                </form>
+                <p>todolist for the college or school </p>
+
+            </div>
+            <div class="category" id="viewall">
+                <!-- <h1>View all</h1> -->
+                <form action="/todolist" method="GET">
+                    <button type="submit">View All</button>
+                </form>
+                <p>all the todolist that is not deleted </p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container2">
+        <h1>All todolists</h1>
+        <!-- we have to show the todos for this section  -->
+        <div class="todos">
+            <div class="notcompletedtodos">
+                <h1>Not completed tasks</h1>
+
+                <% for(let i=0; i < data.notcompletedsize; i++) { %>
+                    <div class="todo">
+                        <button onclick="tickfunc('<%= i %>')" id="tick" class="tickbtn" name="ticked"
+                            value="<%= i %>">Tick</button>
+                        <h2 class="todo-list">
+                            <%= data.notcompletedtodosarr[i] %>
+                        </h2>
+                        <button onclick="newfunc('<%= i %>')" id="delete" class="deletebtn" name="index"
+                            value="<%= i %>">Delete</button>
+                    </div>
+
+                    <% } %>
+            </div>
+            <div class="completedtodos" id="comptodos">
+                <h1>Completed tasks</h1>
+                <% for(let i=0; i < data.completedsize; i++) { %>
+                    <div class="todo1">
+                        <h2 class="todo1-list">
+                            <%= data.completedtodosarr[i] %>
+                        </h2>
+                        <button class="deleteticked" onclick="deleteticked('<%= i %>', 0)" id="delete" name="index"
+                            value="<%= i %>">Delete</button>
+                    </div>
+
+                    <% } %>
+            </div>
+        </div>
+    </section>
+
+    <!-- adding the footer for the page so that it looks better -->
+    <footer class="footer">
+        <p>@copyright 2021, All Rights Reserved</p>
+        <p>Created by Developer of solo company</p>
+    </footer>
+
+
+    <script src="/todolist.js"></script>
+    <script src="/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!-- in this we will write the code for showing the notes in a full detailed way for the convieninece of the user  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notes</title>
+    <!-- adding the css for the notes section  -->
+    <link rel="stylesheet" href="css/notes.css">
+</head>
+
+<body>
+    <!-- now in this we will use the ejs template engine to show the notes totally that the user has asked 
+    -->
+    <div class="headingshownote">
+        <h1>Your Note</h1>
+    </div>
+    <section class="currentnote">
+        <div class="currenttitle">
+            <h1>
+                <%= data.topic %>
+            </h1>
+        </div>
+        <div class="actualnote">
+            <p>
+                <%= data.note %>
+            </p>
+        </div>
+    </section>
+
+    <!-- now we have to add the section for the foorter as well as  -->
+    <!-- lets start writing the code for the footer so that we can hav eth efooter at the bottom only  -->
+    <footer class="footer">
+        <p>@copyright 2021, All Rights Reserved</p>
+        <p>Created by Developer of solo company</p>
+    </footer>
+
+
+</body>
+
+</html>

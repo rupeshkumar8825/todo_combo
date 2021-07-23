@@ -1,0 +1,70 @@
+<!-- this is the web page for the general purpose for the studenst  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yourarena</title>
+    <link rel="stylesheet" href="css/yourarena.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <ul class="navigation">
+            <li><a href="/">Home</a></li>
+            <li><a href="/todolist">Todolist</a></li>
+            <li><a href="/notes">Notes</a></li>
+            <li><a href="/timer">Timer</a></li>
+            <li><a href="/calculator">Calculator</a></li>
+        </ul>
+    </div>
+    <section class="container">
+        <div class="calculator">
+            <div class="console">
+                <div class="input-history">
+                    <h1></h1>
+                </div>
+                <div class="result">
+                    <h1 class="temp_result"></h1>
+                    <h1 class="total_result"></h1>
+                </div>
+            </div>
+            <div class="keyboard">
+                <!-- inside the keyboard we have to add the buttons for the calculator  -->
+                <button class="operator">C</button>
+                <button class="operator" id="CE">CE</button>
+                <button class="operator" id="%"> %</button>
+                <button class="operator" id="/"> / </button>
+
+                <button class="number" id="7"> 7</button>
+                <button class="number" id="8"> 8</button>
+                <button class="number" id="9"> 9</button>
+                <button class="operator" id="*"> *</button>
+
+                <button class="number" id="4"> 4</button>
+                <button class="number" id="5"> 5</button>
+                <button class="number" id="6"> 6</button>
+                <button class="operator" id="-"> -</button>
+
+                <button class="number" id="1"> 1</button>
+                <button class="number" id="2"> 2</button>
+                <button class="number" id="3"> 3</button>
+                <button class="operator" id="+"> +</button>
+
+                <button class="operator" id="+"> </button>
+                <button class="number" id="0"> 0</button>
+                <button class="operator" id="+"> </button>
+                <button class="operator" id="="> =</button>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="/yourarena.js"></script>
+</body>
+
+</html>

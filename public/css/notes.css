@@ -1,0 +1,431 @@
+/* here we will write the css for this notes page for the better user experience  */
+/* dont worry the developers are working on this for your benefit only  */
+/* say all the best to the developers  */
+/* here we will write the css for the notes page that we are providing as the service to the customers or the users that are visiting to the website created by me the first ever project for the web development project then i will do the sorting algorithms visualiser */
+/* writing the css for the college section  */
+
+
+*{
+    margin: 00px;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 00px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+.navbar{
+    border: 2px solid orangered;
+    border-style: dashed;
+    box-shadow: 10px 10px 5px 10px black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    /* position: relative; */
+    /* position: fixed; */
+    top: 00px;
+    z-index: 2;
+
+}
+
+
+
+/* 
+################################################################################################################################ NAVIGATION BAR HOME PAGE #########################################
+################################################################################################# */
+
+/* decorating the navigation for the home page  */
+/* setting the logo  */
+.navbar img{
+    width: 80px;
+    height: 80px;
+    /* padding: 10px; */
+    border-radius: 50%;
+    border: 2px solid green;
+    position: relative;
+}
+
+.navbar h1{
+    font-size: 1rem;
+    width: 100px;
+    /* border: 2px solid red ; */
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;    
+}
+
+.navigation{
+    /* border: 2px solid black; */
+    /* border-style: dotted; */
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+
+}
+
+.navigation li{
+    list-style: none;
+    /* border: 1px solid red; */
+    padding: 10px ;
+
+}
+
+.navigation li a{
+    text-decoration: none;
+    /* border: 1px solid yellow; */
+    color: black;
+    padding: 5px;
+}
+
+/* now adding the hover effect  */
+.navigation li a:hover{
+    background-color: orange;
+    /* border: 2px solid red;    */
+    border-radius: 10px;
+}
+
+
+
+/* ################################################################################################################################## Note Content ##################################################
+#################################################################################################
+
+ */
+ .container{
+    /* background-color: #c2cdd7; */
+    /* background-color: #ee799f; */
+    background-color: #fb8d72 ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 4px solid red; */
+    /* height: 1000px; */
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+ }
+
+ body h1{
+     /* border: 2px solid black; */
+     text-align: center;
+ }
+
+h1{
+    margin-bottom: 30px;
+}
+ 
+ .addnote{
+     margin-top: 70px;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 1000px;    */
+    height: 700px;
+    width: 70%;
+ }
+
+
+ 
+
+.addnote input{
+    width: 70%;
+    height: 6%;
+    border: 2px solid red;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#content{
+    margin-top: 20px;
+    /* border: 2px solid green; */
+    font-size: 1.2rem;
+    /* background-color: wheat; */
+    background-color: #df93cc ;
+    width: 80%;
+    height: 60%;
+}
+
+
+
+
+.addbtn, .temp_addbtn, .deletebtn,.temp_deletebtn{
+    border: 1px solid yellow;
+    background-color: red;
+    height: 30px;
+    width: 80px;
+    font-size: 0.7rem;
+    margin-left: 10px;
+    color: white;   
+}
+
+
+
+.container2{
+    /* border: 4px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */    
+    background-color: #45b3df;
+}
+
+
+
+
+.mynotes, .temp_mynotes{
+
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 400px;
+    margin-bottom: 70px;
+    margin-top: 20px;
+    background-color: #98fb98;
+    box-shadow: 8px 8px 24px tomato;
+    /* background-color: #fa9db7; */
+
+
+}
+
+
+
+.title, .temp_title{
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* color: #f00b44; */
+    color: orangered;
+    
+}
+
+
+
+.notecontent{
+    text-align: center;
+}
+
+
+
+
+/* writing the css for the section which shows the only selected note  */
+.currentnote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid black; */
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 40px 40px;
+    background-color: #fa9db7;
+}
+
+
+
+.currenttitle{
+    text-align: center;
+    /* border: 2px solid red; */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+
+.currenttitle h1{
+    border: none;
+    color: white;
+}
+
+
+.actualnote{
+    /* border: 2px solid pink; */
+    border-radius: 10px;
+    color: rgb(19, 16, 16);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 50%;
+
+}
+
+
+
+.headingshownote h1{
+    background-color:  rgb(220, 194, 148);
+    box-shadow: 0px 8px 24px grey;
+    color: red;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+
+.contentofnote{
+    color:purple;
+}
+
+
+/* adding the css for the footer to have the better look of the webiste that i have created right now  */
+.footer{
+    border: 2px solid black;
+    background-color: #0a183d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 10px; */
+}
+
+.footer p{
+    color: white;
+    font-size: 1.1rem;
+}
+
+
+
+
+/*
+################################################################################################
+################################################################################################
+#######################  CSS FOR RESPONSIVENESS  ##############################################
+###############################################################################################
+############################################################################################## */
+
+
+
+
+/* adding the media query for this purpose  */
+@media only screen and (max-device-width: 760px)
+{
+
+    .navbar::after{
+        display: none;
+    }
+
+
+        
+    .navbar{
+        justify-content: flex-end;
+
+    }
+
+    .navigation{
+      display: none;
+
+    }
+
+
+    .navigation-active{
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 90%;
+        right: 00px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        z-index: 5;
+        opacity: 0.8;
+        /* transform: translateX(100%); */
+        
+        
+    }
+
+    
+    .navigation-active li{
+        list-style: none;
+        /* border: 1px solid red; */
+        padding: 10px ;
+
+    }
+
+    .navigation-active li a{
+        text-decoration: none;
+        /* border: 1px solid yellow; */
+        color: white;
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+
+    /* now adding the hover effect  */
+    .navigation-active li a:hover{
+        background-color: orange;
+        /* border: 2px solid red;    */
+        border-radius: 10px;
+    }
+
+    .hambur
+    {
+        display: inline-block;
+        border: 2px solid red;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .hambur div{
+        
+        background-color: black;
+        height: 4px;
+        width: 30px;
+        margin-top: 2px;
+    }
+
+
+
+
+    .container2{
+        flex-direction: column;
+    }
+
+
+
+
+    .mynotes, .temp_mynotes{
+        width: 60%;
+        padding: 10px;
+        /* font-size: 1rem; */
+    }
+
+    .mynotes h1, .temp_mynotes h1{
+        font-size: 1.2rem;
+    }
+
+    
+
+}
+
+
+
+@media only screen and (max-device-width: 550px)
+{
+    .currentnote{
+        width: 90%;
+        /* margin-bottom: 20px; */
+    }
+    .currenttitle h1{
+        font-size: 1.5rem;
+    }
+
+    .actualnote p{
+        font-size: 1.2rem;
+
+    }
+}

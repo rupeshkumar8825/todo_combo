@@ -1,0 +1,94 @@
+<!-- writing the html for the college section of the todolist part of the service  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal</title>
+    <link rel="stylesheet" href="css/personal.css">
+</head>
+
+<body>
+    <div class="navbar">
+
+        <ul class="navigation">
+            <li><a href="/todolist">Todolist</a></li>
+            <li><a href="/notes">Notes</a></li>
+            <li><a href="/yourarena">Your arena</a></li>
+            <li><a href="/signin">sign out</a></li>
+        </ul>
+
+        <div class="hambur" id="closed">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+    </div>
+    <section class="container1">
+        <h1>PERSONAL SECTION</h1>
+
+        <!-- we have to also make the option for adding the new task for the work section  -->
+        <form class="addtaskform">
+            <input type="text" name="newpersonaltodo" id="inputtask">
+            <button type="submit" name="addpersonaltodo" id="addbtn">Add</button>
+        </form>
+
+        <!-- writing the for loop for showing all the todos for the work section  -->
+        <div class="worktodos">
+            <div class="notcompletedtodos" id="notcomptodos">
+                <h1>Not completed</h1>
+                <% for(var i=0 ; i < data.size2 ; i++) { %>
+
+                    <!-- i have to show the list and the buttons also  -->
+                    <div class="eachtask">
+                        <!-- <form action="/mark-completed-personaltodo" method="POST"> -->
+                        <button type="submit" onclick="ticktask('<%= i %>', 0)" id="tick" name="tick"
+                            value="<%= i %>">Tick</button>
+                        <!-- </form> -->
+                        <h2 class="eachtask-list">
+                            <%= data.notcompletedtodos[i] %>
+                        </h2>
+                        <!-- similarly making the form for the delete option for the user  -->
+                        <button type="submit" onclick="deletenotcompletedtask('<%= i %>', 0)" id="delete"
+                            name="deletework" value="<%= i %>">Delete</button>
+                    </div>
+                    <% } %>
+            </div>
+            <!-- now addin the completed todos part for the work section  -->
+            <div class="completedtodos" id="comptodos">
+                <h1>Completed todos</h1>
+                <% for(var i=0 ; i < data.size1 ; i++) { %>
+                    <!-- i have to show the list and the buttons also  -->
+                    <div class="eachtask1">
+
+                        <h2 class="eachtask1-list">
+                            <%= data.completedtodos[i] %>
+                        </h2>
+                        <!-- similarly making the form for the delete option for the user  -->
+                        <button type="submit" onclick="deletecompletedtask('<%= i %>', 0)" id="delete" name="deletework"
+                            value="<%= i %>">Delete</button>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- now we have to add the section for the foorter as well as  -->
+    <!-- lets start writing the code for the footer so that we can hav eth efooter at the bottom only  -->
+    <footer class="footer">
+        <p>@copyright 2021, All Rights Reserved</p>
+        <p>Created by Developer of solo company</p>
+    </footer>
+
+
+    <script src="/personal.js"></script>
+    <script src="/index.js"></script>
+</body>
+
+
+</html>

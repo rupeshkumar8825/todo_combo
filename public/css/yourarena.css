@@ -1,0 +1,258 @@
+
+*{
+    margin: 00px;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 00px;
+    box-sizing: border-box;
+}
+
+/* 
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+} */
+
+
+.navbar{
+    border: 2px solid orangered;
+    border-style: dashed;
+    box-shadow: 10px 10px 5px 10px black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    /* position: relative; */
+    /* position: fixed; */
+    top: 00px;
+    z-index: 2;
+
+}
+
+/* 
+################################################################################################################################ NAVIGATION BAR HOME PAGE #########################################
+################################################################################################# */
+
+
+/* decorating the navigation for the home page  */
+/* setting the logo  */
+.navbar img{
+    width: 80px;
+    height: 80px;
+    /* padding: 10px; */
+    border-radius: 50%;
+    border: 2px solid green;
+    position: relative;
+}
+
+
+
+.navbar h1{
+    font-size: 1rem;
+    width: 100px;
+    /* border: 2px solid red ; */
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;    
+}
+
+
+
+.navigation{
+    /* border: 2px solid black; */
+    /* border-style: dotted; */
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+
+}
+
+
+
+.navigation li{
+    list-style: none;
+    /* border: 1px solid red; */
+    padding: 10px ;
+
+}
+
+
+
+.navigation li a{
+    text-decoration: none;
+    /* border: 1px solid yellow; */
+    color: black;
+    padding: 5px;
+}
+
+
+
+/* now adding the hover effect  */
+.navigation li a:hover{
+    background-color: orange;
+    /* border: 2px solid red;    */
+    border-radius: 10px;
+}
+
+
+
+.container{
+    /* border: 2px solid red; */
+    display: flex;
+    width: 100%;
+    height: 650px;
+    background-color: blueviolet;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.calculator{
+    /* border: 2px solid orangered; */
+    box-shadow: 8px 8px 24px red;
+    background-color: white;
+    width: 30%;
+    height: 80%;
+
+}
+
+
+
+.console{
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 20%;
+    text-align: right;
+
+}
+
+
+
+
+.input-history{
+    background-color: rgb(218, 213, 213);
+    /* border: 2px solid purple; */
+    width: 100%;
+    height: 40%;
+    /* color: purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* text-align: right; */
+}
+
+.input-history h1{
+    /* border: 2px solid black; */
+    font-weight: lighter;
+    font-size: 1.4rem;
+
+}
+
+
+
+.result{
+    background-color: white;
+    /* opacity: 0.3; */
+    /* color: yellow; */
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 60%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    font-size: 1.5rem;
+    align-items: center;
+ 
+}
+
+
+
+
+.result .temp_result{
+    font-weight: lighter;
+    font-size: 1.4rem;
+    color: black;
+    /* border: 2px solid black; */
+    /* opacity: 1;    */
+    /* z-index: 1; */
+}
+
+
+
+.keyboard{
+    /* border: 2px solid black; */
+    background-color: whitesmoke;
+    width: 100%;
+    height: 80%;
+    /* margin-top: 10px; */
+    display: flex;
+    /* flex-direction: ; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+
+/* writing the css for the button and the operator  */
+.operator, .number{
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    /* margin-top: 1%; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 14%;
+    height: 14%;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+.operator:hover, .number:hover{
+    border: 1px solid red;
+    box-shadow: 8px 8px 24px green;
+    background-color: yellow;
+}
+
+
+
+
+/* we have to give the color at the background for the operators  */
+/* we have to look for the nth child selector for the better purpose  */
+button:nth-child(4)
+{
+    background-color: #20b2aa;
+}
+button:nth-child(8)
+{
+    background-color: #ffa500;
+}
+button:nth-child(12)
+{
+    background-color: #f08080;
+}
+button:nth-child(16)
+{
+    background-color: #7d93e0;
+}
+
+button:nth-child(20)
+{
+    background-color: #9477af;
+}

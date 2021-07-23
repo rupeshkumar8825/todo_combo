@@ -1,0 +1,1046 @@
+/* writing the css for the testing purpose to check whether the set up is ready or not  */
+/* font-family: 'Balsamiq Sans', cursive; */
+
+*{
+    margin: 00px;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 00px;
+    box-sizing: border-box;
+}
+
+
+
+/* 
+################################################################################################################################ NAVIGATION BAR HOME PAGE #########################################
+################################################################################################# */
+
+
+.navbar{
+    /* border: 2px solid orangered; */
+    /* border-style: dashed; */
+    height: 80px;
+    /* box-shadow: 10px 10px 5px 10px black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    /* position: relative; */
+    /* position: fixed; */
+    top: 00px;
+    z-index: 2;
+
+}
+
+
+
+.navbar img{
+    width: 80px;
+    height: 80px;
+    /* padding: 10px; */
+    border-radius: 50%;
+    border: 2px solid green;
+    position: relative;
+}
+
+.navbar h1{
+    font-size: 1rem;
+    width: 100px;
+    /* border: 2px solid red ; */
+    color: red;
+    font-weight: bold;
+    font-size: 1.8rem;    
+}
+
+
+
+.navigation{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+   
+}
+
+
+.navigation li{
+    list-style: none;
+    /* border: 1px solid red; */
+    padding: 10px ;
+
+}
+
+
+.navigation li a{
+    text-decoration: none;
+    /* border: 1px solid yellow; */
+    color: black;
+    padding: 5px;
+}
+
+
+
+/* now adding the hover effect  */
+.navigation li a:hover{
+    background-color: orange;
+    /* border: 2px solid red;    */
+    border-radius: 10px;
+}
+
+
+
+.hambur{
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* #################################################################################################
+################################################################################################
+######################################  CONTAINER1 CODE  ########################################
+################################################################################################ */
+
+
+
+
+/* setting the css for the container-1  */
+.container1{
+    /* border: 4px solid red; */
+    height: 800px;
+    width: 100%;
+    position: relative;
+    top: 00px;
+    display: flex;
+
+}
+
+
+/* now setting the background using the pseudo selectors that we have learnt right now  */
+/* lets implement this properly to learn this concept  */
+.container1::before{
+    content: "";
+    background: url('../bg1.jpg') no-repeat no-repeat center center;
+    background-size: cover;
+    /* background-color: black; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    z-index: -1;
+    animation-name: bganimation;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+
+}
+
+
+
+/* defining the animation for the background that we have right now  */
+@keyframes bganimation{
+    0%{
+        background: url('../bg1.jpg') center center;
+        background-size: cover;
+
+    }
+    50%{
+        background: url('../bg2.jpg') center center;
+        background-size: cover;
+        
+    }
+    100%{
+        background: url('../bg3.jpg') center center;
+        background-size: cover;
+        
+    }
+    
+}
+
+
+
+
+/* adding the css pseudo selector for having the good effect on the background  */
+.container1::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 00px;
+    left: 00px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    /* adding the animation here also for the after pseudo selector  */
+    animation-name: bgafteranimation;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+
+}
+
+
+
+/* defining the animation here for this case  */
+@keyframes bgafteranimation {
+    0%{
+        background-color: black;        
+    }
+    50%{
+       background-color: transparent; 
+    }
+    100%{
+       background-color: black; 
+    }
+    
+}
+
+
+
+
+.container1 .content1{
+    /* border: 4px solid black; */
+    height: 400px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    z-index: 4;
+    /* background-color: white; */
+    margin-top: 200px;
+    margin-left: 100px;
+    padding: 20px;
+}
+
+
+
+
+.content1 h1{
+    /* z-index: 4; */
+    border: 2px solid rgb(132, 200, 243) ;
+    box-shadow: 8px 8px 24px white;
+    border-radius: 10px;
+    background-color: red;
+    /* color: yellow; */
+    /* display: inline-block; */
+    
+    color: rgb(205, 223, 47);
+    font-size: 1.5rem;
+    padding: 10px;
+
+}
+
+
+
+.content1 h2{
+    /* border: 4px solid red; */
+    font-size: 4rem;
+    margin-top: 50px;   
+    text-align: left;
+    color: rgb(255, 251, 255);
+}
+
+
+
+
+.content1 a{
+    text-decoration: none;
+    border: 3px solid black;
+    background-color:#fff10d;
+    box-shadow: 8px 8px 24px rgb(240, 210, 210);
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    border-radius: 20px;
+    /* height: 80px; */
+    /* width: 190px; */
+    padding: 12px 13px;
+    border-style: dashed;
+    /* adding the transition for this button background-color:  ; */
+    transition: background-color color;
+    transition-duration: 0.5s;
+    /* transition-timing-function: ease; */
+}
+
+
+
+
+/* adding the hover effect for the given button  */
+.content1 a:hover{
+    background-color: black;
+    color: red;
+    border-style: dashed;
+    border-color: white;
+    
+}
+
+
+
+
+/* #################################################################################################
+################################################################################################
+######################################  CONTAINER2 CODE  ########################################
+################################################################################################ */
+
+
+
+
+
+/* adding the css for the container-2 */
+.container2{
+    /* border: 2px solid rebeccapurple; */
+    /* height: 300px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+}
+
+
+
+.container2::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 00px;
+    height: 20px;
+    width: 100%;
+    background-color: purple;
+}
+
+
+.container2 h1{
+    font-size: 2.5rem;
+    margin-top: 25px;   
+    position: relative;
+}
+
+
+/* adding the before and the after pseudo selectors for designing  */
+.container2 h1::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 00px;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    
+
+}
+
+
+
+/* adding the before and the after pseudo selectors for designing  */
+.container2 h1::after{
+    content: "";
+    position: absolute;
+    /* top: 00px; */
+    left: 00px;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    top: 44px;    
+
+}
+
+
+
+.container2 p{
+    width: 60%;
+    font-size: 1.4rem;
+    font-family: 'Dosis', sans-serif;
+    /* border: 2px solid black; */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+
+
+/* now writing the css for the cards  */
+.cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* border: 2px solid black; */
+    /* width: 90%; */
+    margin-top: 40px;
+    width: 100%;
+    /* background-color: rgb(132, 200, 243); */
+    padding: 40px;
+}
+
+
+
+
+.singlecard{
+    /* border: 2px solid red;    */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 8px 8px 24px black;
+    padding: 15px;
+    background-color: white;
+    /* height: 500px; */
+    position: relative;
+    width: 300px;
+    
+}
+
+
+
+.singlecard img{
+    width: 90%;
+    height: 300px;
+    /* border: 2px solid black; */
+    /* border-style: dashed; */
+
+
+    border-radius: 20px;
+}
+
+
+.singlecard p{
+    border: 2px solid red;
+    font-family: cursive;
+    /* border: none; */
+    text-align: center;
+    font-size: 1.4rem;
+    width: 250px;
+    color: black;
+    border: none;
+}
+
+
+#card1 p{
+    background-color: #87ba62;
+    color: white;
+}
+#card2 p{
+    background-color: #ff8252;
+    color: white;
+}
+#card3 p{
+    background-color:rgb(214, 76, 76);
+    color: white;
+}
+#card4 p{
+    background-color:violet;
+    color: white;
+}
+
+
+
+
+
+/* #################################################################################################
+################################################################################################
+######################################  CONTAINER3 CODE  ########################################
+################################################################################################ */
+
+
+
+
+/* adding the css for the 3rd container  */
+.container3{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    /* align-items: center; */
+    /* border: 2px solid black; */
+    position: relative;
+    background-color: rgb(202, 228, 245);
+    height: 500px;
+    margin-top: 20px;
+}
+
+
+/* adding the psedo selectors for the border on the top */
+.container3::before{
+    content: "";
+    position: absolute;
+    top: -23px;
+    left: 00px;
+    background-color: rgb(206, 44, 58);
+    height: 20px;
+    width: 100%;
+}
+
+
+.container3 img{
+    width: 50%;
+    height: 500px;
+    /* border: 3px solid black; */
+    box-shadow: 0px 8px 24px black;
+}
+
+
+
+.content3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    width: 80%;
+    /* box-shadow: 0px 8px 24px red; */
+
+
+}
+
+
+
+.content3 h1{
+    /* border: 2px solid black; */
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: brown;
+    padding: 10px;
+}
+
+
+
+.content3 p{
+    /* border: 2px solid black; */
+    font-size: 1.5rem;
+    margin-top: 10px;
+    /* width: 500px; */
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #a020f0;
+}
+
+
+
+/* now writin gthe code for the container4 */
+.container4{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+.container4 #head{
+    font-size: 3.5rem;
+    /* border: 2px solid black; */
+    position: relative;
+
+}
+
+
+
+/* adding the pseudo selectors for better designing paradigms  */
+#head::before{
+    content: "";
+    position: absolute;
+    top: 27px;
+    z-index: -1;
+    left: -20px;
+    background-color: tomato;
+    height: 35%;
+    width: 100%;
+    opacity: 0.5;
+    border-radius: 4px;
+    width: 384px;
+}
+
+
+
+.product-cards{
+    border: 3px solid transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    flex-wrap: wrap;
+
+}
+
+
+
+.pcard{
+    /* border: 3px solid green; */
+    border-radius: 10px;
+    width: 40%;
+    height: 400px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+
+
+
+}
+
+
+.pcard img{
+    width: 120px;
+    height: 150px;
+    /* border: 1px solid black; */
+    
+}
+
+
+.pcard .part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 3px solid red; */
+    /* width: 60%; */
+}
+
+
+
+.pcard .part2{
+    /* border: 3px solid black; */
+    width: 50%;
+}
+
+
+#todolist{
+    background-color: #fa9db7;
+    position: relative;
+}
+
+#notes{
+    background-color: #45b3df;
+    position: relative;
+}
+
+#anaylsis{
+    background-color: #ffc85b;
+    position: relative;
+}
+
+#personalzone{
+    background-color: #99dc7c;
+    position: relative;
+
+}
+
+
+
+/* adding the hover effects for this  */
+#todolist:hover::before, #notes:hover::before, #anaylsis:hover::before, #personalzone:hover::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    opacity: 0.7;
+    top: 00px;
+    left: 00px;
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    box-shadow: 0px 8px 24px orange;
+    border-radius: 10px;
+}
+
+
+
+/* now adding the after part for this  */
+#todolist:hover::after{
+    content: "You can add Tasks";
+    color: white;
+    z-index: 2;
+    opacity: 1;
+    top: 00px;
+    left: 00px;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+
+/* now adding the after part for this  */
+#personalzone:hover::after{
+    content: "You can find Calulator and Timer";
+    color: white;
+    z-index: 2;
+    opacity: 1;
+    top: 00px;
+    left: 00px;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+
+
+/* now adding the after part for this  */
+#notes:hover::after{
+    content: "You can add and delete the notes";
+    color: white;
+    z-index: 2;
+    opacity: 1;
+    top: 00px;
+    left: 00px;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+
+
+/* now adding the after part for this  */
+#anaylsis:hover::after{
+    content: "You can manage your day";
+    color: white;
+    z-index: 2;
+    opacity: 1;
+    top: 00px;
+    left: 00px;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+
+
+
+.part1 h1{
+    font-size: 2rem;
+    color: black;
+}
+.part2 p{
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+
+
+
+/* adding the css for the footer to have the better look of the webiste that i have created right now  */
+.footer{
+    border: 2px solid black;
+    background-color: #0a183d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.footer p{
+    color: white;
+    font-size: 1.1rem;
+}
+
+body{
+
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+/* #################################################################################################
+################################################################################################
+##################################code for responsive  ########################################
+################################################################################################ */
+
+
+
+
+
+/* adding the code for the responsiveness of the website  */
+@media  screen and (max-width: 1396px)
+{
+
+    .navbar{
+        justify-content: space-between;
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .navigation-active{
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 90%;
+        right: 00px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        z-index: 5;
+        opacity: 0.8;
+        /* transform: translateX(100%); */
+        
+        
+    }
+
+    
+    .navigation-active li{
+        list-style: none;
+        /* border: 1px solid red; */
+        padding: 10px ;
+
+    }
+
+    .navigation-active li a{
+        text-decoration: none;
+        /* border: 1px solid yellow; */
+        color: white;
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+
+
+    /* now adding the hover effect  */
+    .navigation-active li a:hover{
+        background-color: orange;
+        /* border: 2px solid red;    */
+        border-radius: 10px;
+    }
+
+
+
+    .hambur
+    {
+        display: inline-block;
+        border: 2px solid red;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+
+
+    .hambur div{
+        
+        background-color: black;
+        height: 4px;
+        width: 30px;
+        margin-top: 2px;
+    }
+
+
+
+
+    .cards{
+        /* flex-direc; */
+        flex-wrap: wrap;
+        
+    }
+
+    .singlecard{
+        margin-top: 40px;
+    }
+
+    
+}
+
+
+
+
+@media only screen and (max-device-width: 1220px)
+{   
+    .navbar{
+
+        justify-content: space-between;
+    }
+   
+    .navbar h1{
+        /* border: 2px solid black; */
+        width: 40%;
+        font-size: 2rem;
+    }
+
+    .product-cards{
+        width: 90%;
+    }
+
+}
+
+
+
+
+@media only screen and (max-device-width: 850px)
+{
+    .pcard{
+        width: 60%;
+    }
+    .product-cards{
+        width: 100%;
+    }
+    .container1{
+        display: flex;
+        flex-direction: column;
+    }
+    .container1 .content1{
+        width: 70%;
+        padding: 00px;
+        align-items: center;
+        margin-left: 00px;
+        justify-content: center;
+        border: 2px solid orangered;
+    }
+
+    .container1 .content1 h2{
+        font-size: 3.2rem;
+    }
+}
+
+
+
+
+
+@media only screen and (max-device-width: 690px)
+{
+    .product-cards{
+        flex-direction: column;
+
+    }   
+
+    .pcard{
+        width: 60%;
+        /* border: 2px solid black; */
+    }
+}
+
+
+
+@media only screen and (max-device-width: 550px)
+{
+    .product-cards{
+        width: 100%;
+    }
+    .pcard{
+        width: 80%;
+    }
+    .container2 h1{
+        font-size: 1.6rem;
+        /* top: 40px; */
+    }
+    .container2 h1::after{
+        top: 30px;
+    }
+
+    .content1 .btn{
+        font-size: 1.3rem;
+    }
+
+    .content3 h1{
+        font-size: 2rem;
+    }
+    .content3 p{
+        font-size: 1.4rem;
+    }
+
+    .container4 #head{
+        font-size: 2rem;
+    }
+
+    #head::before{
+        width: 100%;
+        height: 50%;
+        left: 00px;
+        top: 15px;
+
+    }
+/* 
+    .singlecard{
+        width: 50%;
+    } */
+
+
+}
+
+
+
+
+@media only screen and (max-device-width: 380px)
+{
+    .container2 h1{
+        text-align: center;
+    }
+    .container2 h1::after{ 
+        top: 60px;
+    }       
+
+    .navbar h1{
+        font-size: 1.5rem;
+    }
+
+    .navbar img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .cards{
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .singlecard{
+        /* width: 90%; */
+        width: 100%;
+    }
+
+    .product-cards{
+        width: 100%;
+    }
+
+    .pcard{
+        width: 100%;
+    }
+
+    .content1 h1{
+        font-size: 1.2rem;
+    }
+
+    .container1 .content1 h2{
+        font-size: 2.3rem;
+    }
+
+
+}

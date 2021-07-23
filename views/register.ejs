@@ -1,0 +1,42 @@
+<!-- this is the register page for the website to use the services of the website  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register or signup</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <div class="registersection">
+        <h1>Register</h1>
+
+        <!-- we have to use the form for this to get the registration done in this case  -->
+        <form action="/signup" method="POST">
+            Name : <input type="text" name="myname" placeholder="Enter Your Name" id="username">
+            Email : <input type="email" name="myemail" id="useremail" placeholder="Enter your email">
+            Phone No : <input type="number" name="mynumber" id="usernumber" placeholder="Enter your number">
+            Password : <input type="password" name="mypassword" id="userpassword" placeholder="Enter your Password">
+            Confirm Password : <input type="password" name="myconfirmpassword" id="userconsfirmpassword"
+                placeholder="Enter your Confirmpassword">
+            <input type="submit" value="submit" id="btn">
+        </form>
+        <div class="signin">
+            <a href="/signin"> Signin </a>
+        </div>
+    </div>
+
+
+
+    <!-- now we have to add the section for the foorter as well as  -->
+    <!-- lets start writing the code for the footer so that we can hav eth efooter at the bottom only  -->
+    <footer class="footer">
+        <p>@copyright 2021, All Rights Reserved</p>
+        <p>Created by Developer of solo company</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,581 @@
+*{
+    margin: 00px;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 00px;
+    box-sizing: border-box;
+}
+
+/* this is the body css for the footer as well as for the content  */
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+
+
+
+
+
+/* #################################################################################################
+################################################################################################
+######################################  NAVIGATION CODE  ########################################
+################################################################################################ */
+
+
+
+
+.navbar{
+    border: 2px solid orangered;
+    border-style: dashed;
+    box-shadow: 10px 10px 5px 10px black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    /* position: relative; */
+    /* position: fixed; */
+    top: 00px;
+    z-index: 2;
+
+}
+
+
+
+
+
+/* using the pseudo selectors for the good looking border  */
+.navbar::after{
+    content: "";
+    background-color: yellow;
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    /* top: 77px; */
+    top: 12%;
+    left: 00px;
+}
+
+
+
+
+/* decorating the navigation for the home page  */
+/* setting the logo  */
+.navbar img{
+    width: 80px;
+    height: 80px;
+    /* padding: 10px; */
+    border-radius: 50%;
+    border: 2px solid green;
+    position: relative;
+}
+
+
+
+.navbar h1{
+    font-size: 1rem;
+    width: 100px;
+    /* border: 2px solid red ; */
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;    
+}
+
+
+
+
+.navigation{
+    /* border: 2px solid black; */
+    /* border-style: dotted; */
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+
+}
+
+
+
+
+.navigation li{
+    list-style: none;
+    /* border: 1px solid red; */
+    padding: 10px ;
+
+}
+
+
+
+
+.navigation li a{
+    text-decoration: none;
+    /* border: 1px solid yellow; */
+    color: black;
+    padding: 5px;
+}
+
+
+
+
+/* now adding the hover effect  */
+.navigation li a:hover{
+    background-color: orange;
+    /* border: 2px solid red;    */
+    border-radius: 10px;
+}
+
+
+
+
+
+/* #################################################################################################
+################################################################################################
+##################################OUTERSECTION CODE  ########################################
+################################################################################################ */
+
+
+
+
+
+
+.outersection{
+    /* background-color: #ffc0cb; */
+    /* margin-top: 10px; */
+    background-color: #faebd7;
+    /* border: 2px solid brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 21px;
+    padding: 30px;
+}
+
+
+
+.outersection h1{
+    color: black;
+    font-size: 2.8rem;
+    /* border: 2px solid black; */
+
+}
+
+
+
+
+/* writing the css for the container 1 */
+.container1{
+    margin-top: 10px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    /* border: 2px solid black; */
+    /* height: 700px; */
+    /* flex-direction: column; */
+    /* background-color: #504A4B; */
+}
+
+
+
+
+.category{
+    border: 2px solid red;
+    width: 200px;
+    border-radius: 10px;
+    border-top-left-radius: 00px;
+    border-bottom-left-radius: 00px;
+    /* border-top-right-radius:  ; */
+    margin-top: 40px;
+    box-shadow: 0px 8px 24px orange;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+ 
+    background-color: #cccccc;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    
+}
+
+
+
+
+#work:hover, #life:hover, #college:hover, #personal:hover, #home:hover, #viewall:hover{
+    box-shadow: 0px 8px 24px red;
+}
+
+
+
+
+#work::before, #life::before, #college::before, #personal::before, #home::before, #viewall::before{
+    content: "";
+    background-color: purple;
+    position: absolute;
+    border-radius: 20px;
+    height: 100%;
+    width: 5px;
+    top: 00px;
+    left: -5px;
+    z-index: 1;
+}
+
+
+
+
+
+
+.category form button{
+    border: 2px solid red;
+    /* height: 30px; */
+    /* width: 80px; */
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: crimson;
+    color: white;
+
+}
+
+
+
+.category form button:hover{
+    box-shadow: 0px 8px 24px blue;
+    cursor: pointer;
+}
+
+
+
+.category p{
+    /* border: 2px solid black; */
+    text-align: center;
+    font-size: 1.2rem;
+    /* color: orangered; */
+    color: green;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* #################################################################################################
+################################################################################################
+######################################  CONTAINER2 CODE  ########################################
+################################################################################################ */
+
+
+
+
+
+
+/* adding the css for the container2 where we are storing the todolist  */
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    margin-top: 20px;
+    position: relative;
+
+}
+
+
+
+
+.container2::before{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    top: -20px;
+    left: 00px;
+    height: 20px;
+    width: 100%;
+    z-index: 1;
+}
+
+
+
+.container2 h1{
+    font-size: 2.8rem;
+    /* border: 2px solid grey; */
+}
+
+
+
+.container2 .todos{
+    /* border: 3px solid black; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.notcompletedtodos{
+    
+    /* border: 2px solid black; */
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 50%;
+
+}
+
+
+
+
+.notcompletedtodos .todo{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid red;
+    width: 90%; 
+    padding: 10px;
+    background-color: rgb(240, 133, 133);
+    color: black;
+    margin-top: 20px;
+}
+
+
+
+
+.notcompletedtodos h1{
+    color: red;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+/* .notcompletedtodos .todo */
+
+
+
+
+
+.completedtodos{
+    /* border: 2px solid black; */
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+       /* justify-content: center; */
+    align-items: center;
+    width: 50%;
+}
+
+
+
+
+.completedtodos .todo1, .completedtodos .temp_todo1{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* align-items: center; */
+    border: 2px solid red;
+    width: 90%; 
+    padding: 9px;
+    margin-top: 20px;
+    /* background-color: rgb(240, 133, 133);
+    color: black; */
+    background-color: rgb(98, 225, 98);
+    /* background-color: rgb(240, 133, 133); */
+    color: black;
+}
+
+
+
+
+
+.completedtodos h1{
+    color: red;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+
+
+
+.todo1:hover, .temp_todo1:hover{
+    box-shadow: 0px 8px 24px grey;
+}
+
+
+
+.todo #tick{
+    background-color: lightgreen;
+    /* padding: 4px; */
+    font-size: 1rem;
+    border: 1px solid red;
+    width: 50px;
+    height: 30px;
+
+}
+
+
+
+.todo #delete, .todo1 #delete, .temp_todo1 #delete{
+    background-color: red;
+    color: white;
+    /* padding: 2px; */
+    font-size: 1rem;
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+
+
+.todo h2, .todo1 h2, .temp_todo1 h2{
+    font-size: 1.1rem;
+    text-align: center;
+    width: 450px;
+    /* border: 2px solid brown; */
+    /* padding: 00px;
+    margin-left: 10%;
+    margin-right: 10%; */
+}
+
+
+
+
+/* adding the css for the footer to have the better look of the webiste that i have created right now  */
+.footer{
+    border: 2px solid black;
+    background-color: #0a183d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.footer p{
+    color: white;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* #################################################################################################
+################################################################################################
+######################################  RESPONSIVE CODE  ########################################
+################################################################################################ */
+
+
+
+
+
+
+/* adding the media query for the todolist page for the responsive design  */
+@media only screen and (max-device-width: 815px)
+{
+    .navbar::after{
+        display: none;
+    }
+    .navbar{
+        justify-content: flex-end;
+
+    }
+
+    .navigation{
+      display: none;
+
+    }
+
+
+    .navigation-active{
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 90%;
+        right: 00px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        z-index: 5;
+        opacity: 0.8;
+        /* transform: translateX(100%); */
+        
+        
+    }
+
+    
+    .navigation-active li{
+        list-style: none;
+        /* border: 1px solid red; */
+        padding: 10px ;
+
+    }
+
+    .navigation-active li a{
+        text-decoration: none;
+        /* border: 1px solid yellow; */
+        color: white;
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+    
+
+    /* now adding the hover effect  */
+    .navigation-active li a:hover{
+        background-color: orange;
+        /* border: 2px solid red;    */
+        border-radius: 10px;
+    }
+
+    .hambur
+    {
+        display: inline-block;
+        border: 2px solid red;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .hambur div{
+        
+        background-color: black;
+        height: 4px;
+        width: 30px;
+        margin-top: 2px;
+    }
+
+
+
+    .outersection h1{
+        font-size: 1.8rem;
+    }
+
+    .container2 h1{
+        font-size: 1.8rem;
+    }
+
+    .todos{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* width: 10%; */
+        /* border: 2px solid black; */
+    }
+
+    .notcompletedtodos, .completedtodos{
+        width: 90%;
+    }
+
+    .completedtodos h1{
+        margin-top: 20px;
+    }
+}

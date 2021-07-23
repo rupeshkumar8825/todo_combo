@@ -1,0 +1,38 @@
+
+/* in this we will be writing the css for the 404 page for the smooth functioning of the website  */
+body{
+    background-color: #c4afeb;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.error{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    color: brown;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+.error h1{
+    text-align: center;
+}
+
+
+.error a{
+    text-decoration: none;
+    width: 15%;
+    height: 40px;
+    background-color: red;
+    color: white;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

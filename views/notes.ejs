@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes.com</title>
+    <link rel="stylesheet" href="css/notes.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul class="navigation">
+            <li><a href="/todolist">Todolist</a></li>
+            <li><a href="/notes">Notes</a></li>
+            <!-- <li><a href="#">Anaylsis</a></li> -->
+            <li><a href="/yourarena">Your arena</a></li>
+            <li><a href="/signin">sign out</a></li>
+        </ul>
+
+        <div class="hambur" id="closed">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+    </div>
+
+
+    <!-- now adding the section for the adding the section to add the new note and then i will store it to the database to have the proper use of the knowledge that we have  -->
+    <section class="container">
+        <div class="addnote">
+            <input type="text" name="mytitle" id="tasktitle" placeholder="Add your title of new note">
+            <textarea name="mynote" id="content" cols="100" rows="20">Add the content here for your note</textarea>
+            <button class="addbtn" id="btn" onclick="addnote()" type="submit">ADD</button>
+            <!-- </form> -->
+
+        </div>
+
+    </section>
+
+
+    <!-- giving the another seciton where we will be showing the notes of the user to have the proper use of the project that we have right now -->
+    <h1>Your Notes</h1>
+
+    <section class="container2" id="container2id">
+        <!-- now using the ejs to use the for loop and then add the data dynamically  -->
+        <!-- this data has been brought from the mongodb database that i am managing right now  -->
+        <% for(var i=0 ; i < data.size ; i++) { %>
+            <div class="mynotes">
+                <h2>Note <%= i+1 %>
+                </h2>
+                <div class="title">
+                    <h2 class="titleofnote">
+                        <%= data.notestitle[i] %>
+                    </h2>
+                    <form action="showfullnote" method="GET">
+                        <button type="submit" class="addbtn" id="<%= i %>" onclick='opennote(id, 0)'>Show
+                            Note </button>
+                    </form>
+                </div>
+                <div class="notecontent">
+                    <h1 class="contentofnote">
+                        <%= data.notesarr[i] %>
+                    </h1>
+                </div>
+                <!-- adding the delete button for the notes section to delete the notes  -->
+                <button type="submit" class="deletebtn" id="<%= i %>" onclick="deletenote(id, 0)">Delete note</button>
+            </div>
+            <% } %>
+
+    </section>
+
+
+    <!-- now we have to add the section for the foorter as well as  -->
+    <!-- lets start writing the code for the footer so that we can hav eth efooter at the bottom only  -->
+    <footer class="footer">
+        <p>@copyright 2021, All Rights Reserved</p>
+        <p>Created by Developer of solo company</p>
+    </footer>
+
+
+    <!-- linking the javsacript file for this page  -->
+    <script src="/notes.js"></script>
+    <script src="/index.js"></script>
+</body>
+
+</html>

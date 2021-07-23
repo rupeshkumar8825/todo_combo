@@ -1,0 +1,98 @@
+/* adding the css for the timer  */
+body{
+    height: 100vh;
+    background-color: #8210b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.container{
+    /* border: 2px solid orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80%;
+    width: 70%;
+}
+
+
+
+
+h1{
+    color: white;
+    font-size: 6.5rem;
+    font-weight: bold;
+    /* border: 2px solid black; */
+}
+
+
+
+
+
+.btns{
+    /* border: 2px solid red; */
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.reset, .stop, .start, .resume{
+    /* border: 1px solid black; */
+    font-size: 2rem;
+    padding: 10px;
+    font-size: 1.7rem;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+
+
+.reset{
+    background-color: #f5a841;
+    color: whitesmoke;
+}
+
+.stop, .resume{
+    background-color: #f62100;
+    color: white;
+
+}
+
+
+
+.start{
+    background-color: yellowgreen;
+    color: white;
+}
+
+
+
+.settimer{
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 30%;
+    border: 2px solid brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.enter{
+    border: 2px solid violet;
+    padding: 5px;
+    font-size: 1.3rem;
+    width: 100px;
+    color: blac;
+}
