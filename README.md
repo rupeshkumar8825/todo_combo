@@ -9,8 +9,9 @@ This website is made by using the following technologies:
     c. JavaScript
 
 2. Backend Technologies:
-    a. Expressjs 
-    b. JavaScript
+    a. Nodejs
+    b. Expressjs 
+    c. JavaScript
     
 3. Database :
     a. MongoDB
