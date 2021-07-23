@@ -105,7 +105,7 @@ body{
     /* border: 2px solid red; */
     display: flex;
     width: 100%;
-    height: 650px;
+    height: 100vh;
     background-color: blueviolet;   
     flex-direction: column;
     justify-content: center;
@@ -119,7 +119,7 @@ body{
     box-shadow: 8px 8px 24px red;
     background-color: white;
     width: 30%;
-    height: 80%;
+    height: 60%;
 
 }
 

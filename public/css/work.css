@@ -33,29 +33,6 @@ body{
 
 }
 
-/* using the pseudo selectors for the good looking border  */
-.navbar::after{
-    content: "";
-    background-color: yellow;
-    position: absolute;
-    height: 20px;
-    width: 100%;
-    top: 91px;
-    left: 00px;
-}
-/* using the mediaquery for the change the color of the bottom of the navbar 
-@media only screen and (max-height: 100px) {
-    .navbar::after{
-        content: ""; */
-        /* background-color: yellow; */
-        /* position: absolute;
-        height: 20px;
-        width: 100%;
-        top: 100px;
-        left: 00px; 
-        background-color: purple; */
-    /* } */
-/* } */
 /* 
 ################################################################################################################################ NAVIGATION BAR HOME PAGE #########################################
 ################################################################################################# */

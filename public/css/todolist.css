@@ -47,20 +47,6 @@ body{
 
 
 
-/* using the pseudo selectors for the good looking border  */
-.navbar::after{
-    content: "";
-    background-color: yellow;
-    position: absolute;
-    height: 20px;
-    width: 100%;
-    /* top: 77px; */
-    top: 12%;
-    left: 00px;
-}
-
-
-
 
 /* decorating the navigation for the home page  */
 /* setting the logo  */
